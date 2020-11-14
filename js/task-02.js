@@ -11,11 +11,13 @@ const ingredients = [
 
 const ul = document.getElementById("ingredients");
 
-ingredients.forEach((ingredient) => {
-  const li = document.createElement("li");
-  li.textContent = ingredient;
-  ul.appendChild(li);
-  return ul;
-});
+const makeIngredientsList = function (array) {
+  array.forEach((arr) => {
+    const li = document.createElement("li");
+    li.textContent = arr;
+    ul.appendChild(li);
+    return ul;
+  });
+};
 
-console.log(ul);
+makeIngredientsList(ingredients);
