@@ -35,11 +35,10 @@ const makeGallery = function (array) {
     img.setAttribute("src", url);
     img.setAttribute("alt", alt);
     img.setAttribute("width", "560");
-    li.appendChild(img);
-    // li.textContent = `<img src="${image.url}" alt="${image.alt}">`;
-    ul.appendChild(li);
-    return ul;
+    li.append(img);
+    ul.append(li);
   });
+  return ul;
 };
 
 makeGallery(images);
