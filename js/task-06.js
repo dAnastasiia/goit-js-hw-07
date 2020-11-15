@@ -8,12 +8,13 @@ const input = document.getElementById("validation-input");
 const check = () => {
   let inputSymbolAmount = input.value.length;
   let rightSymbolAmount = Number(input.dataset.length);
-  input.classList.add("invalid");
 
   if (inputSymbolAmount === rightSymbolAmount) {
     input.classList.add("valid");
     input.classList.remove("invalid");
+  } else {
+    input.classList.toggle("invalid");
   }
 };
 
-input.addEventListener("change", check);
+input.addEventListener("blur", check);
