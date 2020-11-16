@@ -12,11 +12,12 @@ const ingredients = [
 const ul = document.getElementById("ingredients");
 
 const makeIngredientsList = function (array) {
-  array.map((arr) => {
+  const liMassive = array.map((arr) => {
     const li = document.createElement("li");
     li.textContent = arr;
-    ul.append(li);
+    return li;
   });
+  ul.append(...liMassive);
   return ul;
 };
 

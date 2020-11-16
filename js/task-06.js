@@ -13,7 +13,8 @@ const check = () => {
     input.classList.add("valid");
     input.classList.remove("invalid");
   } else {
-    input.classList.toggle("invalid");
+    input.classList.add("invalid");
+    input.classList.remove("valid");
   }
 };
 

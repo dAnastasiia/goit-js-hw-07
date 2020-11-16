@@ -27,7 +27,7 @@ const images = [
 const ul = document.getElementById("gallery");
 
 const makeGallery = function (array) {
-  array.map((arr) => {
+  const liMassive = array.map((arr) => {
     const url = arr.url;
     const alt = arr.alt;
     const li = document.createElement("li");
@@ -35,9 +35,11 @@ const makeGallery = function (array) {
     img.setAttribute("src", url);
     img.setAttribute("alt", alt);
     img.setAttribute("width", "560");
-    li.append(img);
-    ul.append(li);
+    li.appendChild(img);
+    return li;
   });
+
+  ul.append(...liMassive);
   return ul;
 };
 
