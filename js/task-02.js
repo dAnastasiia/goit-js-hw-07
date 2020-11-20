@@ -18,7 +18,6 @@ const makeIngredientsList = function (array) {
     return li;
   });
   ul.append(...liMassive);
-  return ul;
 };
 
 makeIngredientsList(ingredients);

@@ -40,7 +40,6 @@ const makeGallery = function (array) {
   });
 
   ul.append(...liMassive);
-  return ul;
 };
 
 makeGallery(images);
